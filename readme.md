@@ -1,4 +1,4 @@
-#express-http-proxy
+# express-http-proxy
 an http proxy midware for express
 
 **Warning** use this midware after use bodyparse and session
@@ -7,7 +7,7 @@ an http proxy midware for express
 
 **警告** 请在加载bodyparse与session中间件后再加载本中间键
 
-###usage
+### usage
 
 ```js
 var proxy = require(`${express-http-proxy}`);
@@ -24,7 +24,7 @@ app.use(bodyParse.json())
 	}))
 ```
 
-###option
+### option
 
 |property|type|todo|necessary|
 |:--|:----|:----|:---|
@@ -34,7 +34,7 @@ app.use(bodyParse.json())
 |onRes|Function|代理转发的后置函数（代理响应后钩子）|N
 |onErr|Function|代理转发的错误函数（代理报错时钩子）|N
 
-###option.onReq
+### option.onReq
 
 代理转发的前置函数（代理请求前钩子），请返回Promise使中间件正确获取完成状态
 
@@ -45,7 +45,7 @@ app.use(bodyParse.json())
 |res|Object|express的req对象
 
 
-###option.onRes
+### option.onRes
 
 代理转发的后置函数（代理响应后钩子），请返回Promise使中间件正确获取完成状态
 
@@ -55,7 +55,7 @@ app.use(bodyParse.json())
 |req|Object|express的req对象
 |res|Object|express的req对象
 
-###option.oneErr
+### option.oneErr
 
 代理转发的错误函数（代理报错时钩子），请返回Promise使中间件正确获取完成状态
 
