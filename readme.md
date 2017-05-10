@@ -14,14 +14,14 @@ var proxy = require(`${express-http-proxy}`);
 //var bodyParser = require('body-parser');
 //var session = require('express-session');
 app.use(bodyParse.json())
-	.use(session())
-	.use(proxy({
+    .use(session())
+    .use(proxy({
     	target: 'http://www.baidu.com',
     	onReq:(httpOption, req, res) => Promise.resolve(),
     	onRes:(data, req, res) => Promise.resolve(),
     	onErr: (err, req, res, next) => console.log(err),
     	apiProxyPath: ['/api/v1', '/api/v2', '/public']
-	}))
+    }))
 ```
 
 ### option
