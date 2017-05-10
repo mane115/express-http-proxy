@@ -6,7 +6,9 @@ an http proxy midware for express
 适用于express的代理中间件
 
 **警告** 请在加载bodyparse与session中间件后再加载本中间键
+
 ###usage
+
 ```js
 var proxy = require(`${express-http-proxy}`);
 //var bodyParser = require('body-parser');
@@ -33,6 +35,7 @@ app.use(bodyParse.json())
 |onErr|Function|代理转发的错误函数（代理报错时钩子）|N
 
 ###option.onReq
+
 代理转发的前置函数（代理请求前钩子），请返回Promise使中间件正确获取完成状态
 
 |params|type|todo|
@@ -43,6 +46,7 @@ app.use(bodyParse.json())
 
 
 ###option.onRes
+
 代理转发的后置函数（代理响应后钩子），请返回Promise使中间件正确获取完成状态
 
 |params|type|todo|
@@ -52,6 +56,7 @@ app.use(bodyParse.json())
 |res|Object|express的req对象
 
 ###option.oneErr
+
 代理转发的错误函数（代理报错时钩子），请返回Promise使中间件正确获取完成状态
 
 |params|type|todo|
